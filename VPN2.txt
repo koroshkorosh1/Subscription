@@ -1,9 +1,254 @@
-hysteria2://TELEGRAM-ID-conf0088@xinhuamall.com.pk.xinhuamall.com.pk:59001?security=tls&obfs=salamander&obfs-password=60znzvw58zf3v7fr&insecure=0#Hysteria2
-vless://TELEGRAM-ID-conf0088@xinhuamall.com.pk.xinhuamall.com.pk:59002?security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&insecure=0&headerType=&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision#vl-TCP
-vless://TELEGRAM-ID-conf0088@xinhuamall.com.pk.xinhuamall.com.pk:59003?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0#vl-WS
-vless://TELEGRAM-ID-conf0088@xinhuamall.com.pk.xinhuamall.com.pk:59004?security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&insecure=0&fp=chrome&type=grpc&allowInsecure=0#vl-gRPC
-vless://TELEGRAM-ID-conf0088@xinhuamall.com.pk.xinhuamall.com.pk:59005?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&insecure=0&fp=chrome&type=httpupgrade&allowInsecure=0#vl-HTTPUpgrade
-vless://TELEGRAM-ID-conf0088@xinhuamall.com.pk.xinhuamall.com.pk:59006?mode=auto&path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&extra=%7B%22mode%22%3A%22auto%22%2C%22xPaddingBytes%22%3A%22100-1000%22%7D&insecure=0&fp=chrome&type=xhttp&allowInsecure=0#vl-XHTTP
-vless://6711ce4c-bee8-4ef2-830d-76ed5fe0c2c0@xinhuamall.com.pk.xinhuamall.com.pk:2053?encryption=none&type=tcp&headerType=http&host=zoom.us#conf0088%C2%B9%F0%9F%87%A9%F0%9F%87%AA
-vmess://eyJ2IjoiMiIsInBzIjoiY29uZjAwODjCsvCfh6nwn4eqIiwiYWRkIjoieGluaHVhbWFsbC5jb20ucGsueGluaHVhbWFsbC5jb20ucGsiLCJwb3J0IjoiMjA4MyIsImlkIjoiNjcxMWNlNGMtYmVlOC00ZWYyLTgzMGQtNzZlZDVmZTBjMmMwIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsImhvc3QiOiJ6b29tLnVzIiwicGF0aCI6Ii8iLCJ0bHMiOiJub25lIiwic25pIjoiIiwiYWxwbiI6IiIsImZwIjoiIn0=
-trojan://x11ouzau53bu5gbx@xinhuamall.com.pk.xinhuamall.com.pk:8443?type=tcp&security=none&headerType=http&path=%2F&host=zoom.us#conf0088%C2%B3%F0%9F%87%A9%F0%9F%87%AA
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns-remote",
+        "server": "8.8.8.8",
+        "detour": "✅  Select"
+      },
+      {
+        "type": "udp",
+        "tag": "dns-direct",
+        "server": "8.8.8.8"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "Direct",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "dns-remote"
+      }
+    ],
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/28"
+      ],
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334
+    },
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2333
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "✅  Select",
+      "outbounds": [
+        "Best Ping 🚀",
+        "defaultName_1",
+        "Shadowsocks",
+        "ShadowsocksT",
+        "Shadowsocks گوگل جمنای",
+        "W گوگل جمنای",
+        "T",
+        "T-T",
+        "W",
+        "Up",
+        "G"
+      ],
+      "interrupt_exist_connections": false
+    },
+    {
+      "type": "urltest",
+      "tag": "Best Ping 🚀",
+      "outbounds": [
+        "defaultName_1",
+        "Shadowsocks",
+        "ShadowsocksT",
+        "Shadowsocks گوگل جمنای",
+        "W گوگل جمنای",
+        "T",
+        "T-T",
+        "W",
+        "Up",
+        "G"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "interrupt_exist_connections": false
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "defaultName_1",
+      "type": "hysteria2",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14001,
+      "password": "TELEGRAM-ID-conf0088",
+      "tls": {
+        "enabled": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "TELEGRAM-ID-conf0088"
+      }
+    },
+    {
+      "tag": "Shadowsocks",
+      "type": "shadowsocks",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14000,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "vqtC77dqhFSRi53MIXt8ow==:N29UV4TDv3gDvUChwi4+yA=="
+    },
+    {
+      "tag": "ShadowsocksT",
+      "type": "shadowsocks",
+      "server": "www.tworiverssoftware.com.tworiverssoftware.com",
+      "server_port": 14004,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "wsOxRD23lOXnIErmO7JVdA==:N29UV4TDv3gDvUChwi4+yA=="
+    },
+    {
+      "tag": "Shadowsocks گوگل جمنای",
+      "type": "shadowsocks",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14003,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "/OArW+wnrwMyOxhrU0bfJw==:N29UV4TDv3gDvUChwi4+yA=="
+    },
+    {
+      "tag": "W گوگل جمنای",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14008,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "T",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14005,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "T-T",
+      "type": "vless",
+      "server": "www.tworiverssoftware.com.tworiverssoftware.com",
+      "server_port": 14006,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "W",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14007,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Up",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14009,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "G",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 14010,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "transport": {
+        "type": "grpc",
+        "service_name": ""
+      },
+      "domain_resolver": "dns-direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "ip_cidr": "172.19.0.2",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "✅  Select"
+      },
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "network": "udp",
+        "action": "reject"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "✅  Select"
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "domain_resolver": "dns-direct",
+    "interval": "30m",
+    "write_to_system": false
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "default_mode": "Rule",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "direct"
+    }
+  }
+}
