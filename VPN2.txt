@@ -61,16 +61,16 @@
       "tag": "✅  Select",
       "outbounds": [
         "Best Ping 🚀",
-        "defaultName_1",
-        "Shadowsocks",
-        "ShadowsocksT",
-        "Shadowsocks گوگل جمنای",
-        "W گوگل جمنای",
+        "Hy-Free-V2",
+        "Shadow",
+        "mK",
+        "vlR",
+        "H",
         "T",
-        "T-T",
         "W",
+        "G",
         "Up",
-        "G"
+        "X"
       ],
       "interrupt_exist_connections": false
     },
@@ -78,16 +78,16 @@
       "type": "urltest",
       "tag": "Best Ping 🚀",
       "outbounds": [
-        "defaultName_1",
-        "Shadowsocks",
-        "ShadowsocksT",
-        "Shadowsocks گوگل جمنای",
-        "W گوگل جمنای",
+        "Hy-Free-V2",
+        "Shadow",
+        "mK",
+        "vlR",
+        "H",
         "T",
-        "T-T",
         "W",
+        "G",
         "Up",
-        "G"
+        "X"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -99,102 +99,123 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "defaultName_1",
+      "tag": "Hy-Free-V2",
       "type": "hysteria2",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14001,
+      "server_port": 39000,
       "password": "TELEGRAM-ID-conf0088",
       "tls": {
         "enabled": true
       },
       "obfs": {
         "type": "salamander",
-        "password": "TELEGRAM-ID-conf0088"
+        "password": "telegram-ID-conf0088"
       }
     },
     {
-      "tag": "Shadowsocks",
+      "tag": "Shadow",
       "type": "shadowsocks",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14000,
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "vqtC77dqhFSRi53MIXt8ow==:N29UV4TDv3gDvUChwi4+yA=="
+      "server_port": 39001,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "jsSIL542frRsUO9q4vPSOjWQyGmS17mSnUscKFw0iAk=:fLydtKel3rsaUR03DBuSX7bGpVC92O4tLkAfJePV4oM="
     },
     {
-      "tag": "ShadowsocksT",
-      "type": "shadowsocks",
-      "server": "www.tworiverssoftware.com.tworiverssoftware.com",
-      "server_port": 14004,
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "wsOxRD23lOXnIErmO7JVdA==:N29UV4TDv3gDvUChwi4+yA=="
-    },
-    {
-      "tag": "Shadowsocks گوگل جمنای",
-      "type": "shadowsocks",
-      "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14003,
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "/OArW+wnrwMyOxhrU0bfJw==:N29UV4TDv3gDvUChwi4+yA=="
-    },
-    {
-      "tag": "W گوگل جمنای",
+      "tag": "mK",
       "type": "vless",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14008,
+      "server_port": 39002,
       "uuid": "TELEGRAM-ID-conf0088",
-      "transport": {
-        "type": "ws",
-        "path": "/"
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "vlR",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 39003,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "pWzLDWKuC3OXQIa6GCuqJoTn2KaVNCcUZ1FQ0cPm3Bo",
+          "short_id": "37273e0c6e0d68"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "H",
+      "type": "vmess",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 39004,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "tag": "T",
-      "type": "vless",
+      "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14005,
+      "server_port": 39005,
       "uuid": "TELEGRAM-ID-conf0088",
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "T-T",
-      "type": "vless",
-      "server": "www.tworiverssoftware.com.tworiverssoftware.com",
-      "server_port": 14006,
-      "uuid": "TELEGRAM-ID-conf0088",
-      "domain_resolver": "dns-direct"
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "tag": "W",
-      "type": "vless",
+      "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14007,
+      "server_port": 39006,
       "uuid": "TELEGRAM-ID-conf0088",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
       "transport": {
         "type": "ws",
         "path": "/"
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Up",
-      "type": "vless",
-      "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14009,
-      "uuid": "TELEGRAM-ID-conf0088",
-      "domain_resolver": "dns-direct"
+      }
     },
     {
       "tag": "G",
-      "type": "vless",
+      "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 14010,
+      "server_port": 39007,
       "uuid": "TELEGRAM-ID-conf0088",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
       "transport": {
         "type": "grpc",
         "service_name": ""
-      },
-      "domain_resolver": "dns-direct"
+      }
+    },
+    {
+      "tag": "Up",
+      "type": "vmess",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 39008,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "tag": "X",
+      "type": "vmess",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 39009,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0
     }
   ],
   "route": {
