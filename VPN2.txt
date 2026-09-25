@@ -61,16 +61,23 @@
       "tag": "✅  Select",
       "outbounds": [
         "Best Ping 🚀",
-        "Hy-Free-V2",
-        "Shadow",
-        "mK",
-        "vlR",
-        "H",
-        "T",
-        "W",
-        "G",
-        "Up",
-        "X"
+        "F-vl-T",
+        "F-S-T",
+        "F-T-Up",
+        "F-v-T",
+        "F-T-W",
+        "F-v-G",
+        "F-Hy",
+        "F-v-Up",
+        "F-v-W",
+        "F-T-G",
+        "F-H-Free-V2",
+        "F-vl-W",
+        "F-vl-Up",
+        "F-Sh",
+        "F-T-T",
+        "F-vl-G",
+        "F-mK"
       ],
       "interrupt_exist_connections": false
     },
@@ -78,16 +85,23 @@
       "type": "urltest",
       "tag": "Best Ping 🚀",
       "outbounds": [
-        "Hy-Free-V2",
-        "Shadow",
-        "mK",
-        "vlR",
-        "H",
-        "T",
-        "W",
-        "G",
-        "Up",
-        "X"
+        "F-vl-T",
+        "F-S-T",
+        "F-T-Up",
+        "F-v-T",
+        "F-T-W",
+        "F-v-G",
+        "F-Hy",
+        "F-v-Up",
+        "F-v-W",
+        "F-T-G",
+        "F-H-Free-V2",
+        "F-vl-W",
+        "F-vl-Up",
+        "F-Sh",
+        "F-T-T",
+        "F-vl-G",
+        "F-mK"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -99,49 +113,30 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Hy-Free-V2",
-      "type": "hysteria2",
-      "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39000,
-      "password": "TELEGRAM-ID-conf0088",
-      "tls": {
-        "enabled": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "telegram-ID-conf0088"
-      }
-    },
-    {
-      "tag": "Shadow",
-      "type": "shadowsocks",
-      "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39001,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "jsSIL542frRsUO9q4vPSOjWQyGmS17mSnUscKFw0iAk=:fLydtKel3rsaUR03DBuSX7bGpVC92O4tLkAfJePV4oM="
-    },
-    {
-      "tag": "mK",
+      "tag": "F-vl-T",
       "type": "vless",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39002,
+      "server_port": 4001,
       "uuid": "TELEGRAM-ID-conf0088",
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "vlR",
-      "type": "vless",
+      "tag": "F-S-T",
+      "type": "shadowsocks",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39003,
-      "uuid": "TELEGRAM-ID-conf0088",
+      "server_port": 4016,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "1ZniQY0kyT3dB4c3fRYyB8nl3u5+hl0N9H5MAYzMWWE=:+5BK8ztPELepmRR7S9hA/FCWYi1wiyIxYHnOTbtamXA="
+    },
+    {
+      "tag": "F-T-Up",
+      "type": "trojan",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4008,
+      "password": "TELEGRAM-ID-conf0088",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "pWzLDWKuC3OXQIa6GCuqJoTn2KaVNCcUZ1FQ0cPm3Bo",
-          "short_id": "37273e0c6e0d68"
-        },
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -150,44 +145,36 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "H",
+      "tag": "F-v-T",
       "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39004,
+      "server_port": 4009,
       "uuid": "TELEGRAM-ID-conf0088",
       "packet_encoding": "xudp",
       "security": "auto",
       "alter_id": 0
     },
     {
-      "tag": "T",
-      "type": "vmess",
+      "tag": "F-T-W",
+      "type": "trojan",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39005,
-      "uuid": "TELEGRAM-ID-conf0088",
-      "packet_encoding": "xudp",
-      "security": "auto",
-      "alter_id": 0
+      "server_port": 4006,
+      "password": "TELEGRAM-ID-conf0088",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "W",
+      "tag": "F-v-G",
       "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39006,
-      "uuid": "TELEGRAM-ID-conf0088",
-      "packet_encoding": "xudp",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "tag": "G",
-      "type": "vmess",
-      "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39007,
+      "server_port": 4011,
       "uuid": "TELEGRAM-ID-conf0088",
       "packet_encoding": "xudp",
       "security": "auto",
@@ -198,24 +185,130 @@
       }
     },
     {
-      "tag": "Up",
+      "tag": "F-Hy",
+      "type": "hysteria2",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4000,
+      "password": "TELEGRAM-ID-conf0088",
+      "tls": {
+        "enabled": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "telegram-ID-conf0088"
+      }
+    },
+    {
+      "tag": "F-v-Up",
       "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39008,
+      "server_port": 4012,
       "uuid": "TELEGRAM-ID-conf0088",
       "packet_encoding": "xudp",
       "security": "auto",
       "alter_id": 0
     },
     {
-      "tag": "X",
+      "tag": "F-v-W",
       "type": "vmess",
       "server": "www.datagrid.cl.datagrid.cl",
-      "server_port": 39009,
+      "server_port": 4010,
       "uuid": "TELEGRAM-ID-conf0088",
       "packet_encoding": "xudp",
       "security": "auto",
-      "alter_id": 0
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "tag": "F-T-G",
+      "type": "trojan",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4007,
+      "password": "TELEGRAM-ID-conf0088",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "F-H-Free-V2",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4014,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "F-vl-W",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4002,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "F-vl-Up",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4004,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "F-Sh",
+      "type": "shadowsocks",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4013,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "ZMpAYgoB57ae7y2aJ+FRxQ==:A1SY4rYxy9tiG7NIpfF91Q=="
+    },
+    {
+      "tag": "F-T-T",
+      "type": "trojan",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4005,
+      "password": "TELEGRAM-ID-conf0088",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "F-vl-G",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4003,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "transport": {
+        "type": "grpc",
+        "service_name": ""
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "F-mK",
+      "type": "vless",
+      "server": "www.datagrid.cl.datagrid.cl",
+      "server_port": 4015,
+      "uuid": "TELEGRAM-ID-conf0088",
+      "domain_resolver": "dns-direct"
     }
   ],
   "route": {
